@@ -20,16 +20,19 @@ class ApplicationController < Sinatra::Base
     Article.create(title: params[:title], content: params[:content])
 
     redirect to "/articles/#{Article.last.id}"
+    #redirects to articles/id and shows the last article inputted.
   end
 
   get '/articles' do
     @articles = Article.all
+    #index erb: Iterate through the @articles variable and show the title and content for all articles.
 
     erb :index
   end
 
   get '/articles/:id' do
     @article = Article.find(params[:id])
+    #show erb: shows the title and content for a particular id.
 
     erb :show
   end
