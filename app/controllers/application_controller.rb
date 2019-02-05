@@ -23,7 +23,7 @@ class ApplicationController < Sinatra::Base
   end
 
   get '/articles'
-  @articles = Article.all
+    @articles = Article.all
 
   erb :index
 
