@@ -51,5 +51,8 @@ class ApplicationController < Sinatra::Base
     # Redirects to updated article id not last id to be updated.
   end
 
+  delete '/articles/:id' do
+    
+  end
 
 end
