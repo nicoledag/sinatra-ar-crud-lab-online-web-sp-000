@@ -49,12 +49,13 @@ class ApplicationController < Sinatra::Base
 
     redirect to "/articles/#{article.id}"
     # Redirects to updated article id not last id to be updated.
+    binding.pry
   end
 
   delete '/articles/:id' do
     # article = Article.find(params[:id])
     # article.delete
-    binding.pry
+
 
     # redirect to "/articles"
   end
