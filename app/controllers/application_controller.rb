@@ -20,7 +20,7 @@ class ApplicationController < Sinatra::Base
     Article.create(title: params[:title], content: params[:content])
     # @articles = Article.all
 
-    # erb :index
+    erb :index
   end
 
 end
