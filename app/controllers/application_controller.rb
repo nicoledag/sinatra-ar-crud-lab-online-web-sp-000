@@ -45,9 +45,7 @@ class ApplicationController < Sinatra::Base
 
   patch '/articles/:id' do
     article = Article.find(params[:id])
-    article.title = params[:name]
-    article.content = params[:content]
-    article.save
+    article.update(title: params[:title], content: params[:content])
 binding.pry
     redirect to "/articles/#{Article.last.id}"
   end
