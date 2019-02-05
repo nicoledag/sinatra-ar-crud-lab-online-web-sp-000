@@ -48,6 +48,7 @@ class ApplicationController < Sinatra::Base
     article.update(title: params[:title], content: params[:content])
 
     redirect to "/articles/#{article.id}"
+    # Redirects to updated article id not last id to be updated.
   end
 
 
