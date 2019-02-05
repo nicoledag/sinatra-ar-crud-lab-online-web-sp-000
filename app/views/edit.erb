@@ -1,4 +1,5 @@
-<form action="/articles" method="POST">
+<form action="/articles/<%= @article.id%>" method="POST">
+  <!-- Added article.id -->
 
 <input id="hidden" type="hidden" name="_method" value="PATCH">
 <!-- Added PATCH to form -->
