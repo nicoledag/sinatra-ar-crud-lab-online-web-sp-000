@@ -56,7 +56,7 @@ class ApplicationController < Sinatra::Base
     # article.delete
     binding.pry
 
-    redirect to "/articles"
+    # redirect to "/articles"
   end
 
 end
